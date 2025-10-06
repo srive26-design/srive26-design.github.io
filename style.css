@@ -110,7 +110,7 @@ nav.shift ul li a:after {
   height: 1px;
   content: '.';
   color: transparent;
-  background: #59c17a;
+  background: #3a86ff;
   padding:10px;
   visibility: none;
   opacity: 0;
@@ -192,15 +192,15 @@ h2{
 .porttext {
   
     border-radius: 25px; /* 10% border radius */
-    background-color: #59c17a;
+    background-color: #3a86ff;
     padding: 20px;
     width: 100%; /* Expand the paragraph to fill its container */
-    box-sizing: border-box; /* Include padding in width calculations */
+    box-sizing: border-box; /* Include padding in width calculations */c
  
 }
 /* fact generator*/
 .genFact{
-  background:#59c17a;
+  background:#3a86ff;
   border-radius: 10px;
   border-style: none;
   padding: 15px;
