@@ -28,39 +28,25 @@ $(window).resize(function() {
 });
 
 
-/* Fact generator*/
-
-var factList = [
-  "I'm insanely good at Mario Kart",/*0*/
-  "I can solve a Rubik's cube in an okay amount of time",/*1*/
-  "I used to play soccer",/*2*/
-  "I'm a member of the LGBTQ+ community",/*3*/
-  "I enjoy photography",/*4*/
-  "I love to ride my bike; I even have a name for it",/*5*/
-  "I'm an only child"]; /*6*/
-
-var count = 0;
-
+// Simple random fact generator
 document.addEventListener('DOMContentLoaded', function() {
+  var factList = [
+    "I'm insanely good at Mario Kart",
+    "I can solve a Rubik's cube in an okay amount of time",
+    "I used to play soccer",
+    "I'm a member of the LGBTQ+ community",
+    "I enjoy photography",
+    "I love to ride my bike; I even have a name for it",
+    "I'm an only child"
+  ];
+
   var fact = document.getElementById("fact");
   var myButton = document.getElementById("myButton");
-  
-  console.log("Fact generator loaded - Button:", myButton, "Fact element:", fact);
-  
+
   if (myButton && fact) {
-    myButton.addEventListener("click", displayFact);
-    console.log("Event listener added successfully");
-  } else {
-    console.error("Could not find button or fact element");
+    myButton.addEventListener("click", function() {
+      var randomIndex = Math.floor(Math.random() * factList.length);
+      fact.innerHTML = factList[randomIndex];
+    });
   }
 });
-
-function displayFact(){
-  console.log("displayFact called, count:", count);
-  var fact = document.getElementById("fact");
-  fact.innerHTML = factList[count];
-  count++;
-  if (count == factList.length){
-    count = 0;
-  }
-}
