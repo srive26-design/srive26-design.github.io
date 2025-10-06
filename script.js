@@ -34,7 +34,6 @@ document.addEventListener('DOMContentLoaded', function() {
     "I'm insanely good at Mario Kart",
     "I can solve a Rubik's Cube in a minute",
     "I used to play soccer",
-    "I'm a member of the LGBTQ+ community",
     "I enjoy photography",
     "I love to ride my bike; I even have a name for it",
     "I'm an only child",
@@ -43,8 +42,15 @@ document.addEventListener('DOMContentLoaded', function() {
     "I like break-dancing",
     "I like to juggle, working on juggling up to 4 balls",
     "My favorite food is Lasagna",
-    "My cat's name is Buddy"
-  ];
+    "My cat's name is Buddy",
+    "Sometimes I write poetry",
+    "I'm learning the drums",
+    "I love going on runs or to the gym",
+    "I've been to a silent disco",
+    "I can skateboard",
+    "I know ASL",
+    "I play Ultimate Frisbee"
+      ];
 
   var fact = document.getElementById("fact");
   var myButton = document.getElementById("myButton");
