@@ -32,12 +32,18 @@ $(window).resize(function() {
 document.addEventListener('DOMContentLoaded', function() {
   var factList = [
     "I'm insanely good at Mario Kart",
-    "I can solve a Rubik's cube in an okay amount of time",
+    "I can solve a Rubik's Cube in a minute",
     "I used to play soccer",
     "I'm a member of the LGBTQ+ community",
     "I enjoy photography",
     "I love to ride my bike; I even have a name for it",
-    "I'm an only child"
+    "I'm an only child",
+    "I have an all black cat",
+    "I like to try and catch the Aurora up by school",
+    "I like break-dancing",
+    "I like to juggle, working on juggling up to 4 balls",
+    "My favorite food is Lasagna",
+    "My cat's name is Buddy"
   ];
 
   var fact = document.getElementById("fact");
