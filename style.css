@@ -330,3 +330,10 @@ h1, h2, h3{
   padding: 2rem 0 3rem;
   text-align: center;
 }
+/* Bigger-than-compact journal (mid size) */
+.media--journal iframe{
+  aspect-ratio: auto;
+  height: 600px;     /* adjust this number */
+  max-height: none;
+}
+
