@@ -271,43 +271,30 @@ h1, h2, h3{
   text-align: center;
 }
 /* ===============================
-   PORTFOLIO CARD SIZING FIXES
-   Paste this at the bottom of style.css
+   MASONRY-STYLE PORTFOLIO GRID
+   Cards stack naturally under each other
    =============================== */
 
-/* Grid should let cards size to content (no forced equal heights) */
+/* Masonry grid using CSS columns */
 .grid {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 1rem;
-  grid-auto-rows: auto;
-  align-items: start;
+  column-count: 2;           /* two columns on desktop */
+  column-gap: 1.25rem;
 }
 
-/* Default card width */
+/* Each card becomes a masonry item */
 .project {
-  grid-column: span 6;
+  display: inline-block;     /* REQUIRED for column masonry */
+  width: 100%;
+  margin-bottom: 1.25rem;
+  break-inside: avoid;       /* prevents card splitting */
 }
 
-/* Optional width variations */
+/* Wide cards span full width */
 .project--wide {
-  grid-column: span 12;
+  column-span: all;
 }
 
-.project--half {
-  grid-column: span 6;
-}
-
-/* Responsive: single column on small screens */
-@media (max-width: 900px) {
-  .project,
-  .project--wide,
-  .project--half {
-    grid-column: span 12;
-  }
-}
-
-/* Media container controls proportions */
+/* Media sizing stays proportional */
 .media {
   width: 100%;
   overflow: hidden;
@@ -316,7 +303,7 @@ h1, h2, h3{
   border: 1px solid rgba(255,255,255,0.08);
 }
 
-/* Videos + iframes: consistent visual weight */
+/* Video + iframe */
 .media video,
 .media iframe {
   width: 100%;
@@ -326,7 +313,7 @@ h1, h2, h3{
   display: block;
 }
 
-/* Images: keep natural proportions */
+/* Images keep natural proportions */
 .media img {
   width: 100%;
   height: auto;
@@ -334,7 +321,14 @@ h1, h2, h3{
   object-fit: contain;
 }
 
-/* Prevent extremely tall embeds from taking over the page */
+/* Cap super tall embeds */
 .media iframe {
   max-height: 70vh;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .grid {
+    column-count: 1;
+  }
 }
