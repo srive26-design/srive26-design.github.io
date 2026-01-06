@@ -1,8 +1,8 @@
+// script.js (jQuery)
 
-document.addEventListener("DOMContentLoaded", () => {
-  // Footer year
-  const year = document.getElementById("year");
-  if (year) year.textContent = new Date().getFullYear();
+$(function () {
+  // Footer year (works on both pages)
+  $("#year").text(new Date().getFullYear());
 
   // Random fact generator
   const factList = [
@@ -27,22 +27,18 @@ document.addEventListener("DOMContentLoaded", () => {
     "I play Ultimate Frisbee"
   ];
 
-  const fact = document.getElementById("fact");
-  const myButton = document.getElementById("myButton");
+  // This delegated handler still works even if you move the button later
+  $(document).on("click", "#myButton", function () {
+    const randomIndex = Math.floor(Math.random() * factList.length);
+    $("#fact").text(factList[randomIndex]);
+  });
 
-  if (myButton && fact) {
-    myButton.addEventListener("click", () => {
-      const randomIndex = Math.floor(Math.random() * factList.length);
-      fact.textContent = factList[randomIndex];
+  // Optional: subtle parallax for hero background
+  const $heroBg = $(".hero__bg");
+  if ($heroBg.length) {
+    $(window).on("scroll", function () {
+      const y = window.scrollY || $(window).scrollTop();
+      $heroBg.css("transform", `translateY(${y * 0.12}px) scale(1.05)`);
     });
-  }
-
-  // Subtle parallax for hero background (optional, safe)
-  const heroBg = document.querySelector(".hero__bg");
-  if (heroBg) {
-    window.addEventListener("scroll", () => {
-      const y = window.scrollY;
-      heroBg.style.transform = `translateY(${y * 0.12}px) scale(1.05)`;
-    }, { passive: true });
   }
 });
