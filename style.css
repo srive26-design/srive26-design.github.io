@@ -270,3 +270,71 @@ h1, h2, h3{
   padding: 2rem 0 3rem;
   text-align: center;
 }
+/* ===============================
+   PORTFOLIO CARD SIZING FIXES
+   Paste this at the bottom of style.css
+   =============================== */
+
+/* Grid should let cards size to content (no forced equal heights) */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1rem;
+  grid-auto-rows: auto;
+  align-items: start;
+}
+
+/* Default card width */
+.project {
+  grid-column: span 6;
+}
+
+/* Optional width variations */
+.project--wide {
+  grid-column: span 12;
+}
+
+.project--half {
+  grid-column: span 6;
+}
+
+/* Responsive: single column on small screens */
+@media (max-width: 900px) {
+  .project,
+  .project--wide,
+  .project--half {
+    grid-column: span 12;
+  }
+}
+
+/* Media container controls proportions */
+.media {
+  width: 100%;
+  overflow: hidden;
+  border-radius: calc(var(--radius) - 6px);
+  background: rgba(0,0,0,0.25);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* Videos + iframes: consistent visual weight */
+.media video,
+.media iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  border: 0;
+  display: block;
+}
+
+/* Images: keep natural proportions */
+.media img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* Prevent extremely tall embeds from taking over the page */
+.media iframe {
+  max-height: 70vh;
+}
