@@ -223,19 +223,28 @@ h1, h2, h3{
   max-width: 70ch;
 }
 
-.grid{
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 1rem;
+/* ===============================
+   MASONRY-STYLE PORTFOLIO GRID
+   Cards stack naturally under each other
+   =============================== */
+.grid {
+  column-count: 2;
+  column-gap: 1.25rem;
 }
-.project{
-  grid-column: span 6;
+
+.project {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 1.25rem;
+  break-inside: avoid;
+
   background: var(--panel);
   border: 1px solid rgba(255,255,255,0.10);
   border-radius: var(--radius);
   padding: 1rem;
   box-shadow: var(--shadow);
 }
+
 .project__title{
   font-size: 1.25rem;
   margin-bottom: 0.6rem;
@@ -244,57 +253,13 @@ h1, h2, h3{
   margin-top: 0.8rem;
   color: var(--muted);
 }
-.media{
-  border-radius: calc(var(--radius) - 6px);
-  overflow: hidden;
-  background: rgba(0,0,0,0.25);
-  border: 1px solid rgba(255,255,255,0.08);
-}
-.media iframe{
-  width: 100%;
-  aspect-ratio: 16 / 10;
-  border: 0;
-}
-.media img{
-  width: 100%;
-  height: auto;
-}
-
-/* Responsive */
-@media (max-width: 900px){
-  .project{ grid-column: span 12; }
-}
-
-/* Footer */
-.footer{
-  padding: 2rem 0 3rem;
-  text-align: center;
-}
-/* ===============================
-   MASONRY-STYLE PORTFOLIO GRID
-   Cards stack naturally under each other
-   =============================== */
-
-/* Masonry grid using CSS columns */
-.grid {
-  column-count: 2;           /* two columns on desktop */
-  column-gap: 1.25rem;
-}
-
-/* Each card becomes a masonry item */
-.project {
-  display: inline-block;     /* REQUIRED for column masonry */
-  width: 100%;
-  margin-bottom: 1.25rem;
-  break-inside: avoid;       /* prevents card splitting */
-}
 
 /* Wide cards span full width */
 .project--wide {
   column-span: all;
 }
 
-/* Media sizing stays proportional */
+/* ===== Media ===== */
 .media {
   width: 100%;
   overflow: hidden;
@@ -303,17 +268,17 @@ h1, h2, h3{
   border: 1px solid rgba(255,255,255,0.08);
 }
 
-/* Video + iframe */
-.media video,
-.media iframe {
+/* Default behavior:
+   - videos/images: natural height (no forced aspect ratio)
+   - iframes: framed like an embed (unless overridden)
+*/
+.media video {
   width: 100%;
-  aspect-ratio: 16 / 9;
   height: auto;
-  border: 0;
   display: block;
+  aspect-ratio: auto;
 }
 
-/* Images keep natural proportions */
 .media img {
   width: 100%;
   height: auto;
@@ -321,90 +286,47 @@ h1, h2, h3{
   object-fit: contain;
 }
 
-/* Cap super tall embeds */
 .media iframe {
+  width: 100%;
+  display: block;
+  border: 0;
+  aspect-ratio: 16 / 9;
+  height: auto;
   max-height: 70vh;
 }
 
-/* Responsive */
-@media (max-width: 900px) {
-  .grid {
-    column-count: 1;
-  }
-}
 /* ===============================
    TALL MEDIA (for journals / PDFs)
    =============================== */
-
-/* Allow certain embeds to grow vertically */
 .media--tall iframe {
-  aspect-ratio: auto;     /* remove 16:9 constraint */
-  height: 80vh;           /* tall but controlled */
-  max-height: none;       /* override iframe cap */
+  aspect-ratio: auto;
+  height: 80vh;
+  max-height: none;
 }
 
 /* ===============================
    COMPACT EMBEDS (image-sized)
    =============================== */
-
-/* Treat certain iframes like images */
 .media--compact iframe {
-  aspect-ratio: auto;     /* remove video ratio */
+  aspect-ratio: auto;
   height: auto;
-  max-height: 420px;      /* MATCHES typical image card height */
+  max-height: 420px;
 }
 
-/* Ensure consistent spacing */
-.media--compact {
-  display: flex;
-  align-items: center;
-}
-
-/* ===============================
-   FIX: REMOVE EXTRA EMPTY SPACE IN CARDS
-   Make videos/images size naturally (no forced 16:9 box)
-   Keep iframes framed unless overridden
-   =============================== */
-
-/* Videos should use their native aspect ratio */
-.media video {
-  aspect-ratio: auto !important;
-  height: auto !important;
-}
-
-/* Images already natural, but enforce it */
-.media img {
-  height: auto !important;
-  object-fit: contain;
-}
-
-/* Iframes: keep a nice framed ratio by default */
-.media iframe {
-  aspect-ratio: 16 / 9;
-  height: auto;
-}
-
-/* Your existing modifiers still work */
-.media--tall iframe {
-  aspect-ratio: auto !important;
-  height: 80vh !important;
-  max-height: none !important;
-}
-
-.media--compact iframe {
-  aspect-ratio: auto !important;
-  height: auto !important;
-  max-height: 420px !important;
-}
-
-/* Use this on any card that still shows weird extra space */
-.media--fit {
-  display: block;
-}
-
+/* Optional: use when a specific card still looks off */
 .media--fit video,
 .media--fit img {
   width: 100%;
   height: auto;
 }
 
+/* Responsive */
+@media (max-width: 900px) {
+  .grid { column-count: 1; }
+}
+
+/* Footer */
+.footer{
+  padding: 2rem 0 3rem;
+  text-align: center;
+}
