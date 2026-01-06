@@ -397,3 +397,14 @@ h1, h2, h3{
   max-height: 420px !important;
 }
 
+/* Use this on any card that still shows weird extra space */
+.media--fit {
+  display: block;
+}
+
+.media--fit video,
+.media--fit img {
+  width: 100%;
+  height: auto;
+}
+
