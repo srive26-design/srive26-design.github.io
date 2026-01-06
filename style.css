@@ -343,3 +343,19 @@ h1, h2, h3{
   max-height: none;       /* override iframe cap */
 }
 
+/* ===============================
+   COMPACT EMBEDS (image-sized)
+   =============================== */
+
+/* Treat certain iframes like images */
+.media--compact iframe {
+  aspect-ratio: auto;     /* remove video ratio */
+  height: auto;
+  max-height: 420px;      /* MATCHES typical image card height */
+}
+
+/* Ensure consistent spacing */
+.media--compact {
+  display: flex;
+  align-items: center;
+}
