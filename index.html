@@ -1,90 +1,103 @@
- <!DOCTYPE html>
-<html>
-  <head>
-    
-    <title> Samia's Resume </title>
-    <meta charset="utf-8" />
-          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Merriweather&display=swap" rel="stylesheet">
-    
+  <title>Samia Rivera | Portfolio</title>
+  <meta name="description" content="Samia Rivera — Electrical & Computer Engineering student. Robotics, embedded projects, and creative work." />
 
-          <!-- link the webpage's stylesheet -->
-    <link rel="stylesheet" href="style.css" />
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="script.js" defer></script>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-  </head>
-  
-  <body>
-    <header>
-      <div class="sample-header">
-        <div class="sample-header-section">
-         
-    
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Sticky Nav -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a class="nav__logo" href="index.html">Samia Rivera</a>
+      <ul class="nav__links" aria-label="Primary">
+        <li><a class="nav__link is-active" href="index.html">Home</a></li>
+        <li><a class="nav__link" href="portfolio.html">Works</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero" role="banner">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="hero__content">
+      <p class="hero__eyebrow">ECE student • Robotics • Hands-on builder</p>
+      <h1 class="hero__title">Curiosity-driven engineering with real projects.</h1>
+      <p class="hero__subtitle">
+        I’m a sophomore at the University of Rochester, passionate about electrical engineering,
+        robotics, and building things that work in the real world.
+      </p>
+
+      <div class="hero__cta">
+        <a class="btn" href="portfolio.html">See my work</a>
+        <a class="btn btn--ghost" href="#story">Read my story</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <!-- Story -->
+    <section id="story" class="section">
+      <h2 class="section__title">Why engineering</h2>
+      <div class="card">
+        <div class="prose">
+          <p>
+            In 8th grade, during my Living Environment class, a group of Columbia students visited and introduced us
+            to biomedical engineering. It was the first time I had ever heard of engineering, and they taught us
+            about prosthetics, how they work, and why people rely on them.
+          </p>
+          <p>
+            When the students returned, we got to design our own prosthetics, taking into account real-world factors
+            and challenges. Learning the problem, brainstorming solutions, and building something that could improve
+            people’s lives was the most exciting thing I had ever done.
+          </p>
+          <p>
+            That experience revealed something about me: I have an engineer’s mindset. I’ve always wanted to know
+            how things work and how to make them better. From that moment on, I knew I wanted to study engineering.
+          </p>
         </div>
       </div>
-      
-    </header>
+    </section>
 
-    <nav class="shift">
-      <div class="nav-content">
-        <div class="logo">
-          <a href="index.html">Samia Rivera</a>
+    <!-- Random Fact -->
+    <section class="section">
+      <div class="card card--accent">
+        <div class="fact">
+          <div class="fact__left">
+            <h2 class="section__title section__title--small">Random Fact Generator</h2>
+            <p class="muted">Click to learn something small (and true) about me.</p>
+          </div>
+
+          <div class="fact__right">
+            <button class="btn btn--dark" id="myButton" type="button">Dig deeper</button>
+          </div>
         </div>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="portfolio.html">Works</a></li>
 
-        </ul>
+        <p class="fact__output" id="fact" aria-live="polite">Learn something about me</p>
       </div>
-    </nav>
+    </section>
 
-<main>
-  
-  <div class="sample-section-wrap">
-    <div class="sample-section">
-  <p> Currently a sophmore at University of Rochester driven by curiosity and a passion in electrical engineering.
-<br>
-    <br> 
-    <br>
-    <br>
-  I made this website to let you know a little about me and why I want to be an engineer. It get's better as you scroll, so please, stay until the end!
-<br>
-    <br> 
-    <br>
-    <br>
-    In 8th grade, during my Living Environment class, a group of Columbia students visited and introduced us to biomedical engineering. It was the first time I had ever heard of engineering, and they taught us about prosthetics—how they work and why people rely on them. I had always done well in school, though I often felt bored, but this class immediately fascinated me.
+    <footer class="footer">
+      <p class="muted">© <span id="year"></span> Samia Rivera</p>
+    </footer>
+  </main>
 
-    When the students returned, we got to design our own prosthetics, taking into account real-world factors and challenges. The process of learning about the problem, brainstorming possible solutions, applying critical thinking, and then building something that could actually improve people’s lives—it was the most exciting thing I had ever done (well, maybe second to jumping on a trampoline).
-
-    That experience revealed something about me: I have an engineer’s mindset. I’ve always wanted to know how things work and how to make them better, and that curiosity shapes much of my life. From that moment on, I knew I wanted to study engineering.
-<br>
-    <br> 
-    <br>
-    <br>
-  I think back to that lab four years ago and its memory is so clear in my mind; it’s how I know this is what I was meant to do and I never changed my mind. 
-</p>
-    </div></div>
-
-  <div class="genFact">
-    <br> <h2>Random Fact Generator</h2>
-    <button id="myButton">Dig Deeper!</button> 
-  </br></div>
-
-    <p id="fact">Learn something about me</p>
-      
-    </main>
-
+  <script src="script.js" defer></script>
+</body>
+</html>
 
     
   </body>
