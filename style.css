@@ -332,3 +332,14 @@ h1, h2, h3{
     column-count: 1;
   }
 }
+/* ===============================
+   TALL MEDIA (for journals / PDFs)
+   =============================== */
+
+/* Allow certain embeds to grow vertically */
+.media--tall iframe {
+  aspect-ratio: auto;     /* remove 16:9 constraint */
+  height: 80vh;           /* tall but controlled */
+  max-height: none;       /* override iframe cap */
+}
+
