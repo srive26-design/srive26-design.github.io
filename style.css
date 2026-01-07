@@ -352,3 +352,20 @@ body::before {
   max-height: none;
 }
 
+/* ===============================
+   SECTION PAIR ROW (two cards side-by-side)
+   Works even if your main layout uses masonry columns
+   =============================== */
+.pair-row{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+/* On small screens, stack */
+@media (max-width: 900px){
+  .pair-row{
+    grid-template-columns: 1fr;
+  }
+}
