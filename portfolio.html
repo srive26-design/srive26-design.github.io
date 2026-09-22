@@ -27,112 +27,120 @@
     </div>
   </nav>
 
-  <main id="main" class="container">
-    <header class="pagehead">
-      <h1 class="pagehead__title">My Work</h1>
-      <p class="pagehead__subtitle">Current projects, coursework, robotics, and earlier builds. I’m keeping this page simple so the work itself is the focus.</p>
+  <main id="main">
+    <header class="pagehead pagehead--band">
+      <div class="container">
+        <h1 class="pagehead__title">My Work</h1>
+        <p class="pagehead__subtitle">Current projects, coursework, robotics, and earlier builds.</p>
+      </div>
     </header>
 
-    <section class="section">
-      <h2>Current Projects</h2>
-      <div class="grid">
-        <article class="card">
-          <div class="card__media">
-            <div class="terminal">
-              <strong>Slightly<br>Dangerous LLC</strong>
-              <span>C++17</span>
+    <section class="section section--base">
+      <div class="container">
+        <h2>Current Projects</h2>
+        <div class="grid">
+          <article class="card card--blue">
+            <div class="card__media">
+              <div class="terminal">
+                <strong>Slightly<br>Dangerous LLC</strong>
+                <span>C++17</span>
+              </div>
             </div>
-          </div>
-          <div class="card__body">
-            <p class="card__meta">Personal Project / Sept. 2025 – Present</p>
-            <h3>Slightly Dangerous LLC</h3>
-            <p>A C++ console game with generated mazes, inventory and loot systems, minigames, lore, and three distinct workdays.</p>
-            <a href="slightly-dangerous.html">Open project →</a>
-          </div>
-        </article>
+            <div class="card__body">
+              <p class="card__meta">Personal Project / Sept. 2025 – Present</p>
+              <h3>Slightly Dangerous LLC</h3>
+              <p>A C++ console game with generated mazes, inventory and loot systems, minigames, lore, and three distinct workdays.</p>
+              <a href="slightly-dangerous.html">Open project →</a>
+            </div>
+          </article>
 
-        <article class="card">
-          <div class="card__body">
-            <p class="card__meta">Embedded Systems / Arduino Mega 2560</p>
-            <h3>ECE Embedded Programming Labs</h3>
-            <p>AVR/C++ work on the Arduino Mega 2560, including direct register control, assembly timing loops, serial input, and Morse-code LED output.</p>
-            <p>More lab photos and writeups will be added as the course continues.</p>
-          </div>
-        </article>
+          <article class="card">
+            <div class="card__body">
+              <p class="card__meta">Embedded Systems / Arduino Mega 2560</p>
+              <h3>ECE Embedded Programming Labs</h3>
+              <p>AVR/C++ work on the Arduino Mega 2560, including direct register control, assembly timing loops, serial input, and Morse-code LED output.</p>
+              <p>More lab photos and writeups will be added as the course continues.</p>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section class="section" id="robotics">
-      <div class="section__head">
-        <div>
-          <h2 class="section__title">VEX Competitive Robotics</h2>
-          <p>Team 9717A · mechanical design, CAD, building, testing, and leadership across three competition seasons.</p>
+    <section class="section section--soft" id="robotics">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <h2 class="section__title">VEX Competitive Robotics</h2>
+            <p>Team 9717A · mechanical design, CAD, building, testing, and leadership across three competition seasons.</p>
+          </div>
+          <a class="section__link" href="archive.html">Full robotics archive →</a>
         </div>
-        <a class="section__link" href="archive.html">Full robotics archive →</a>
-      </div>
 
-      <div class="grid">
-        <article class="card">
-          <div class="card__media card__media--contain">
-            <img src="assets/robot-cad.webp" alt="CAD model of VEX competition robot" loading="lazy">
-          </div>
-          <div class="card__body">
-            <h3>Robot CAD &amp; Design</h3>
-            <p>I worked on mechanical design and CAD, balancing robot performance, reliability, packaging, and the constraints of competition.</p>
-          </div>
-        </article>
+        <div class="grid">
+          <article class="card">
+            <div class="card__media card__media--contain card__media--light">
+              <img src="assets/robot-cad.webp" alt="CAD model of VEX competition robot" loading="lazy">
+            </div>
+            <div class="card__body">
+              <h3>Robot CAD &amp; Design</h3>
+              <p>I worked on mechanical design and CAD, balancing robot performance, reliability, packaging, and the constraints of competition.</p>
+            </div>
+          </article>
 
-        <article class="card">
-          <div class="card__media">
-            <video controls preload="none">
-              <source src="assets/VexRobo.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="card__body">
-            <h3>Season Recap</h3>
-            <p>Competition footage and build work from my time on the team, including the season where our robot earned a design award.</p>
-          </div>
-        </article>
+          <article class="card">
+            <div class="card__media">
+              <video controls preload="none">
+                <source src="assets/VexRobo.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="card__body">
+              <h3>Season Recap</h3>
+              <p>Competition footage and build work from my time on the team, including the season where our robot earned a design award.</p>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="section__head">
-        <div>
-          <h2 class="section__title">Earlier Engineering &amp; Builds</h2>
-          <p>A few pieces from the larger archive.</p>
+    <section class="section section--deep">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <h2 class="section__title">Earlier Engineering &amp; Builds</h2>
+            <p>A few pieces from the larger archive.</p>
+          </div>
+          <a class="section__link" href="archive.html">View everything →</a>
         </div>
-        <a class="section__link" href="archive.html">View everything →</a>
-      </div>
 
-      <div class="gallery">
-        <figure>
-          <img src="assets/soph.jpg" alt="Earlier VEX robot" loading="lazy">
-          <figcaption>Earlier VEX robot</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/knex2.jpg" alt="K'nex Ferris wheel build" loading="lazy">
-          <figcaption>K'nex Ferris wheel</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/setup2.jpg" alt="Custom PC setup" loading="lazy">
-          <figcaption>Custom PC build</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/lab1.jpg" alt="Personal electronics lab project" loading="lazy">
-          <figcaption>Personal electronics lab</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/cad3.jpg" alt="CAD model of a prosthetic hand" loading="lazy">
-          <figcaption>Prosthetic hand CAD</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/shpe1.jpg" alt="Engineering outreach project" loading="lazy">
-          <figcaption>Engineering outreach</figcaption>
-        </figure>
-      </div>
+        <div class="gallery">
+          <figure>
+            <img src="assets/soph.jpg" alt="Earlier VEX robot" loading="lazy">
+            <figcaption>Earlier VEX robot</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/knex2.jpg" alt="K'nex Ferris wheel build" loading="lazy">
+            <figcaption>K'nex Ferris wheel</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/setup2.jpg" alt="Custom PC setup" loading="lazy">
+            <figcaption>Custom PC build</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/lab1.jpg" alt="Personal electronics lab project" loading="lazy">
+            <figcaption>Personal electronics lab</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/cad3.jpg" alt="CAD model of a prosthetic hand" loading="lazy">
+            <figcaption>Prosthetic hand CAD</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/shpe1.jpg" alt="Engineering outreach project" loading="lazy">
+            <figcaption>Engineering outreach</figcaption>
+          </figure>
+        </div>
 
-      <p class="project-note">The full archive keeps the older photos, videos, journals, CAD work, outreach, sports, martial arts, and other projects from the original site.</p>
+        <p class="project-note">The full archive keeps the older photos, videos, journals, CAD work, outreach, sports, martial arts, and other projects from the original site.</p>
+      </div>
     </section>
   </main>
 

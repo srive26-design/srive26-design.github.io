@@ -27,37 +27,52 @@
     </div>
   </nav>
 
-  <main id="main" class="container project-detail">
-    <header class="pagehead">
-      <p><a href="portfolio.html">← Back to work</a></p>
-      <h1 class="pagehead__title">Slightly Dangerous LLC</h1>
-      <p class="pagehead__subtitle">C++ console game · Sept. 2025 – Present</p>
+  <main id="main">
+    <header class="pagehead pagehead--band">
+      <div class="container project-detail">
+        <p><a href="portfolio.html">← Back to work</a></p>
+        <h1 class="pagehead__title">Slightly Dangerous LLC</h1>
+        <p class="pagehead__subtitle">C++ console game · Sept. 2025 – Present</p>
+      </div>
     </header>
 
-    <section class="section">
-      <div class="card__media" style="border:1px solid var(--line); border-radius:14px; overflow:hidden; max-width:760px;">
-        <div class="terminal">
-          <strong>Slightly<br>Dangerous LLC</strong>
-          <span>Explore. Collect. Get out.</span>
+    <section class="section section--video">
+      <div class="container project-detail">
+        <div class="project-video">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/su0o38yYsF4"
+            title="Slightly Dangerous LLC gameplay video"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+          </iframe>
         </div>
       </div>
+    </section>
 
-      <h2>About the Project</h2>
-      <p>Slightly Dangerous LLC is a console adventure game I built in C++. The player works three shifts inside generated mazes, explores rooms, encounters creatures, collects items, and tries to make enough money to meet each day’s quota.</p>
-      <p>The project started as a class game and has grown into a larger personal project as I continue improving the exploration, inventory, story, and game systems.</p>
+    <section class="section section--soft">
+      <div class="container project-detail">
+        <h2>About the Project</h2>
+        <p>Slightly Dangerous LLC is a console adventure game I built in C++. The player works three shifts inside generated mazes, explores rooms, encounters creatures, collects items, and tries to make enough money to meet each day’s quota.</p>
+        <p>The project started as a class game and has grown into a larger personal project as I continue improving the exploration, inventory, story, and game systems.</p>
 
-      <h2>What I Built</h2>
-      <ul>
-        <li>Procedurally generated mazes with room-by-room exploration.</li>
-        <li>Inventory and loot systems with limited carrying space and item values.</li>
-        <li>Creature encounters and timed minigames.</li>
-        <li>Three-day progression with changing quotas and story content.</li>
-        <li>Separate C++ classes/files for the player, maze, rooms, items, monsters, story, HUD, and shared utilities.</li>
-      </ul>
+        <h2>What I Built</h2>
+        <ul>
+          <li>Procedurally generated mazes with room-by-room exploration.</li>
+          <li>Inventory and loot systems with limited carrying space and item values.</li>
+          <li>Creature encounters and timed minigames.</li>
+          <li>Three-day progression with changing quotas and story content.</li>
+          <li>Separate C++ classes/files for the player, maze, rooms, items, monsters, story, HUD, and shared utilities.</li>
+        </ul>
+      </div>
+    </section>
 
-      <h2>Example</h2>
-      <p>Loot is not counted as money until the player safely reaches the exit and turns it in.</p>
-      <pre class="code-box"><code>int Player::turnInInventory()
+    <section class="section section--deep">
+      <div class="container project-detail">
+        <h2>Example</h2>
+        <p>Loot is not counted as money until the player safely reaches the exit and turns it in.</p>
+        <pre class="code-box"><code>int Player::turnInInventory()
 {
     int payout = getActualInventoryValue();
 
@@ -66,29 +81,34 @@
 
     return payout;
 }</code></pre>
-
-      <h2>Build &amp; Controls</h2>
-      <p>The current source package includes the project files and README.</p>
-      <div class="links">
-        <a class="button button--accent" href="assets/Slightly-Dangerous-LLC-source.zip" download>Download source ZIP</a>
       </div>
+    </section>
 
-      <pre class="build-code"><code>.\build.bat
+    <section class="section section--base">
+      <div class="container project-detail">
+        <h2>Build &amp; Controls</h2>
+        <p>The current source package includes the project files and README.</p>
+        <div class="links">
+          <a class="button button--accent" href="assets/Slightly-Dangerous-LLC-source.zip" download>Download source ZIP</a>
+        </div>
+
+        <pre class="build-code"><code>.\build.bat
 .\LLC3.exe</code></pre>
 
-      <table class="controls">
-        <thead>
-          <tr><th>Key</th><th>Action</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>W A S D</td><td>Move</td></tr>
-          <tr><td>M</td><td>Map</td></tr>
-          <tr><td>N</td><td>Add map marker</td></tr>
-          <tr><td>I</td><td>Inventory</td></tr>
-          <tr><td>J</td><td>Lore journal</td></tr>
-          <tr><td>Q</td><td>Turn in loot at the exit</td></tr>
-        </tbody>
-      </table>
+        <table class="controls">
+          <thead>
+            <tr><th>Key</th><th>Action</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>W A S D</td><td>Move</td></tr>
+            <tr><td>M</td><td>Map</td></tr>
+            <tr><td>N</td><td>Add map marker</td></tr>
+            <tr><td>I</td><td>Inventory</td></tr>
+            <tr><td>J</td><td>Lore journal</td></tr>
+            <tr><td>Q</td><td>Turn in loot at the exit</td></tr>
+          </tbody>
+        </table>
+      </div>
     </section>
   </main>
 

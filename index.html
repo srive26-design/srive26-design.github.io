@@ -27,91 +27,108 @@
     </div>
   </nav>
 
-  <main id="main" class="container">
-    <header class="hero">
-      <p class="hero__kicker">Electrical &amp; Computer Engineering</p>
-      <h1 class="hero__title">Hi, I’m Samia Rivera.</h1>
-      <p class="hero__intro">I’m an ECE student at the University of Rochester. This site is a collection of my engineering work, projects, and experience.</p>
-      <div class="links">
-        <a class="button button--accent" href="portfolio.html">View my work</a>
-        <a class="button" href="assets/Samia-Rivera-Resume.pdf">Resume</a>
-        <a class="button" href="https://github.com/srive26-design">GitHub</a>
+  <main id="main">
+    <header class="hero hero--photo">
+      <div class="container hero__content">
+        <p class="hero__kicker">Electrical &amp; Computer Engineering</p>
+        <h1 class="hero__title">Hi, I’m Samia Rivera.</h1>
+        <p class="hero__intro">I’m an ECE student at the University of Rochester. This site is a collection of my engineering work, projects, and experience.</p>
+        <div class="links">
+          <a class="button button--accent" href="portfolio.html">View my work</a>
+          <a class="button" href="assets/Samia-Rivera-Resume.pdf">Resume</a>
+          <a class="button" href="https://github.com/srive26-design">GitHub</a>
+        </div>
       </div>
     </header>
 
-    <section class="section" id="experience">
-      <div class="section__head">
-        <h2 class="section__title">Experience</h2>
+    <section class="section section--soft" id="experience">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">Experience</h2>
+        </div>
+        <article class="experience">
+          <div class="experience__meta">
+            <h3>PRIMERGY</h3>
+            <p class="role">Interconnection &amp; Transmission Intern</p>
+            <p>May 2026 – Present</p>
+            <p>Continued part-time during the school year.</p>
+          </div>
+          <div class="experience__details">
+            <ul>
+              <li>Research and organize utility interconnection requirements for renewable energy projects.</li>
+              <li>Build Excel trackers for project diligence, queue status, milestones, payments, schedules, and development risks.</li>
+              <li>Support Engineering and Development workflows, including requirements for Salesforce process improvements.</li>
+            </ul>
+          </div>
+        </article>
       </div>
-      <article class="experience">
-        <div class="experience__meta">
-          <h3>PRIMERGY</h3>
-          <p class="role">Interconnection &amp; Transmission Intern</p>
-          <p>May 2026 – Present</p>
-          <p>Continued part-time during the school year.</p>
-        </div>
-        <div class="experience__details">
-          <ul>
-            <li>Research and organize utility interconnection requirements for renewable energy projects.</li>
-            <li>Build Excel trackers for project diligence, queue status, milestones, payments, schedules, and development risks.</li>
-            <li>Support Engineering and Development workflows, including requirements for Salesforce process improvements.</li>
-          </ul>
-        </div>
-      </article>
     </section>
 
-    <section class="section" id="featured-work">
-      <div class="section__head">
-        <h2 class="section__title">Featured Work</h2>
-        <a class="section__link" href="portfolio.html">See all work →</a>
-      </div>
-      <div class="grid">
-        <article class="card">
-          <div class="card__media">
-            <div class="terminal">
-              <strong>Slightly<br>Dangerous LLC</strong>
-              <span>C++ console game</span>
+    <section class="section section--base" id="featured-work">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">Featured Work</h2>
+          <a class="section__link" href="portfolio.html">See all work →</a>
+        </div>
+        <div class="grid">
+          <article class="card card--blue">
+            <div class="card__media">
+              <div class="terminal">
+                <strong>Slightly<br>Dangerous LLC</strong>
+                <span>C++ console game</span>
+              </div>
             </div>
-          </div>
-          <div class="card__body">
-            <p class="card__meta">C++ / Personal Project</p>
-            <h3>Slightly Dangerous LLC</h3>
-            <p>A console adventure with procedural mazes, inventory, loot, creature encounters, and a three-day progression system.</p>
-            <a href="slightly-dangerous.html">Project details →</a>
-          </div>
-        </article>
+            <div class="card__body">
+              <p class="card__meta">C++ / Personal Project</p>
+              <h3>Slightly Dangerous LLC</h3>
+              <p>A console adventure with procedural mazes, inventory, loot, creature encounters, and a three-day progression system.</p>
+              <a href="slightly-dangerous.html">Project details →</a>
+            </div>
+          </article>
 
-        <article class="card">
-          <div class="card__media card__media--contain">
-            <img src="assets/robot-cad.webp" alt="CAD model of a VEX competition robot" loading="lazy">
-          </div>
-          <div class="card__body">
-            <p class="card__meta">VEX Robotics / Team 9717A</p>
-            <h3>Competition Robotics</h3>
-            <p>Three seasons of robot design, CAD, mechanical building, testing, competition, and team leadership.</p>
-            <a href="portfolio.html#robotics">See robotics work →</a>
-          </div>
-        </article>
+          <article class="card">
+            <div class="card__media card__media--contain card__media--light">
+              <img src="assets/robot-cad.webp" alt="CAD model of a VEX competition robot" loading="lazy">
+            </div>
+            <div class="card__body">
+              <p class="card__meta">VEX Robotics / Team 9717A</p>
+              <h3>Competition Robotics</h3>
+              <p>Three seasons of robot design, CAD, mechanical building, testing, competition, and team leadership.</p>
+              <a href="portfolio.html#robotics">See robotics work →</a>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section class="section" id="about">
-      <div class="about">
+    <section class="section section--deep" id="about">
+      <div class="container about">
         <div>
           <h2>About Me</h2>
           <p>I like projects where I can understand how the full system works, then build or improve part of it myself. My experience has ranged from competitive robotics and embedded programming to C++ development and renewable-energy interconnection.</p>
           <p>Outside engineering, I spend time on ultimate frisbee, music, photography, and whatever project I decide to start next.</p>
         </div>
-        <dl class="quick-list">
-          <dt>School</dt>
-          <dd>University of Rochester</dd>
-          <dt>Major</dt>
-          <dd>Electrical &amp; Computer Engineering</dd>
-          <dt>Programming</dt>
-          <dd>C, C++, Verilog/VHDL, HTML/CSS</dd>
-          <dt>Tools &amp; interests</dt>
-          <dd>Arduino, CAD, embedded systems, robotics, power systems, Excel</dd>
-        </dl>
+
+        <div class="about__side">
+          <dl class="quick-list">
+            <dt>School</dt>
+            <dd>University of Rochester</dd>
+            <dt>Major</dt>
+            <dd>Electrical &amp; Computer Engineering</dd>
+            <dt>Programming</dt>
+            <dd>C, C++, Verilog/VHDL, HTML/CSS</dd>
+            <dt>Tools &amp; interests</dt>
+            <dd>Arduino, CAD, embedded systems, robotics, power systems, Excel</dd>
+          </dl>
+
+          <div class="fact">
+            <div>
+              <h3>Random Fact</h3>
+              <p id="fact" class="fact__output" aria-live="polite">I play ultimate frisbee.</p>
+            </div>
+            <button class="button button--accent" type="button" id="myButton">Another fact</button>
+          </div>
+        </div>
       </div>
     </section>
   </main>
