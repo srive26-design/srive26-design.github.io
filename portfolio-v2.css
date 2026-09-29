@@ -98,7 +98,7 @@ code, pre, kbd { font-family: var(--mono); }
     linear-gradient(0deg, rgba(44, 46, 72, .80) 0%, rgba(44, 46, 72, .05) 48%),
     url("assets/me.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: center-top;
 }
 .hero__content { position: relative; padding: 6rem 0 5rem; }
 .hero__kicker {
