@@ -95,12 +95,13 @@ code, pre, kbd { font-family: var(--mono); }
   position: relative;
   background-image:
     linear-gradient(
-    to bottom,
-    rgba(44, 46, 72, 0.05),
-    rgba(44, 46, 72, 0.30)
+      to bottom,
+      rgba(44, 46, 72, 0.05),
+      rgba(44, 46, 72, 0.30)
+    ),
     url("assets/me.jpg");
   background-size: cover;
-  background-position: center-top;
+  background-position: center top;
 }
 .hero__content { position: relative; padding: 6rem 0 5rem; }
 .hero__kicker {
