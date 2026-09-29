@@ -98,7 +98,6 @@ code, pre, kbd { font-family: var(--mono); }
     to bottom,
     rgba(44, 46, 72, 0.05),
     rgba(44, 46, 72, 0.30)
-  );
     url("assets/me.jpg");
   background-size: cover;
   background-position: center-top;
