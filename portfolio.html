@@ -1,152 +1,111 @@
-<!doctype html>
-<html lang="en" id="top">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Work | Samia Rivera</title>
-  <meta name="description" content="Projects and engineering work by Samia Rivera.">
-  <meta name="theme-color" content="#2c2e48">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="portfolio-v2.css">
-  <script src="portfolio-v2.js" defer></script>
-</head>
-  <link rel="stylesheet" href="portfolio-additions.css">
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
-
-  <nav class="nav">
-    <div class="nav__inner">
-      <a class="nav__logo" href="index.html">Samia Rivera</a>
-      <ul class="nav__links" aria-label="Primary navigation">
-        <li><a class="nav__link" href="index.html">Home</a></li>
-        <li><a class="nav__link is-active" href="portfolio.html">Work</a></li>
-        <li><a class="nav__link" href="assets/Samia-Rivera-Resume.pdf">Resume</a></li>
-        <li><a class="nav__link" href="https://www.linkedin.com/in/samia-rivera">LinkedIn</a></li>
-      </ul>
+<!-- START: 2026 engineering builds (paste before </main> in portfolio.html) -->
+<section class="new-builds" id="recent-builds" aria-labelledby="recent-builds-heading">
+  <div class="new-builds__inner">
+    <div class="new-builds__heading">
+      <p class="new-builds__eyebrow">2026 / HANDS-ON ENGINEERING</p>
+      <h2 id="recent-builds-heading">Recent Engineering Builds</h2>
+      <p>From designing the enclosure to wiring the electronics and debugging the code, these are some of the projects I have been building and testing recently.</p>
     </div>
-  </nav>
 
-  <main id="main" class="container">
-    <header class="pagehead">
-      <h1 class="pagehead__title">My Work</h1>
-      <p class="pagehead__subtitle">Current projects, coursework, robotics, and earlier builds. </p>
-    </header>
-
-    <section class="section">
-      <h2>Current Projects</h2>
-      <div class="grid">
-        <article class="card">
-          <div class="card__media">
-            <div class="terminal">
-              <strong>Slightly<br>Dangerous LLC</strong>
-              <span>C++17</span>
-            </div>
-          </div>
-          <div class="card__body">
-            <p class="card__meta">Personal Project / Sept. 2025 – Present</p>
-            <h3>Slightly Dangerous LLC</h3>
-            <p>A C++ console game with generated mazes, inventory and loot systems, minigames, lore, and three distinct workdays.</p>
-            <a href="slightly-dangerous.html">Open project →</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card__body">
-            <p class="card__meta">Embedded Systems / Arduino Mega 2560</p>
-            <h3>ECE Embedded Programming Labs</h3>
-            <p>AVR/C++ work on the Arduino Mega 2560, including direct register control, assembly timing loops, serial input, and Morse-code LED output.</p>
-            <p>More lab photos and writeups will be added as the course continues.</p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="section" id="robotics">
-      <div class="section__head">
-        <div>
-          <h2 class="section__title">VEX Competitive Robotics</h2>
-          <p>Team 9717A · mechanical design, CAD, building, testing, and leadership across three competition seasons.</p>
+    <!-- PROJECT 1: FLOWER TOKENS -->
+    <article class="build-card" id="flower-tokens">
+      <div class="build-card__intro">
+        <p class="build-card__category">PERSONAL PROJECT / EMBEDDED SYSTEMS</p>
+        <h3>Flower Tokens — Connected Keepsakes</h3>
+        <p>I designed and built a pair of handheld devices that send little signals to each other over Wi-Fi. Each token uses an ESP32-C3, addressable LEDs, and a vibration motor. I also designed and 3D-printed the enclosures, painted them, soldered the electronics, and tested the finished devices.</p>
+        <div class="build-card__tags" aria-label="Technologies used">
+          <span>ESP32-C3</span><span>Wi-Fi / MQTT</span><span>C++</span><span>OpenSCAD</span><span>3D Printing</span><span>Soldering</span>
         </div>
-        <a class="section__link" href="archive.html">Full robotics archive →</a>
       </div>
-
-      <div class="grid">
-        <article class="card">
-          <div class="card__media card__media--contain">
-            <img src="assets/robot-cad.webp" alt="CAD model of VEX competition robot" loading="lazy">
-          </div>
-          <div class="card__body">
-            <h3>Robot CAD &amp; Design</h3>
-            <p>I worked on mechanical design and CAD, balancing robot performance, reliability, packaging, and the constraints of competition.</p>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card__media">
-            <video controls preload="none">
-              <source src="assets/VexRobo.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="card__body">
-            <h3>Season Recap</h3>
-            <p>Competition footage and build work from my time on the team, including the season where our robot earned a design award.</p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="section__head">
-        <div>
-          <h2 class="section__title">Earlier Engineering &amp; Builds</h2>
-          <p>A few pieces from the larger archive.</p>
+      <div class="build-card__media-layout">
+        <figure class="build-card__demo">
+          <video controls playsinline preload="metadata" poster="assets/flower-tokens-finished.webp" aria-label="Demonstration of finished connected Flower Tokens">
+            <source src="assets/flower-tokens-demo.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+          </video>
+          <figcaption>Finished tokens — demo video</figcaption>
+        </figure>
+        <div class="build-card__gallery" aria-label="Flower Tokens project photos">
+          <a class="build-card__tile" href="assets/flower-enclosure-parts.webp" target="_blank" rel="noopener noreferrer">
+            <img src="assets/flower-enclosure-parts.webp" alt="Four 3D-printed pieces of the Flower Tokens enclosures laid out before assembly" loading="lazy">
+            <span>Printed enclosure pieces</span>
+          </a>
+          <a class="build-card__tile" href="assets/flower-painted-shells.webp" target="_blank" rel="noopener noreferrer">
+            <img src="assets/flower-painted-shells.webp" alt="Hand-painted purple and pink Flower Tokens shells" loading="lazy">
+            <span>Hand-painted shells</span>
+          </a>
+          <a class="build-card__tile" href="assets/flower-interior-assembly.webp" target="_blank" rel="noopener noreferrer">
+            <img src="assets/flower-interior-assembly.webp" alt="Internal circuitry inside both printed token enclosures" loading="lazy">
+            <span>Both devices assembled</span>
+          </a>
+          <a class="build-card__tile" href="assets/flower-electronics-test.webp" target="_blank" rel="noopener noreferrer">
+            <img src="assets/flower-electronics-test.webp" alt="Open token enclosure connected by USB during an electronics test" loading="lazy">
+            <span>Electronics testing</span>
+          </a>
         </div>
-        <a class="section__link" href="archive.html">View everything →</a>
       </div>
+    </article>
 
-      <div class="gallery">
-        <figure>
-          <img src="assets/soph.jpg" alt="Earlier VEX robot" loading="lazy">
-          <figcaption>Earlier VEX robot</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/knex2.jpg" alt="K'nex Ferris wheel build" loading="lazy">
-          <figcaption>K'nex Ferris wheel</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/setup2.jpg" alt="Custom PC setup" loading="lazy">
-          <figcaption>Custom PC build</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/lab1.jpg" alt="Personal electronics lab project" loading="lazy">
-          <figcaption>Personal electronics lab</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/cad3.jpg" alt="CAD model of a prosthetic hand" loading="lazy">
-          <figcaption>Prosthetic hand CAD</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/shpe1.jpg" alt="Engineering outreach project" loading="lazy">
-          <figcaption>Engineering outreach</figcaption>
-        </figure>
+    <!-- PROJECT 2: MOTOR / ENCODER LAB -->
+    <article class="build-card" id="motor-encoder">
+      <div class="build-card__intro">
+        <p class="build-card__category">ECE 112 / MECHATRONICS</p>
+        <h3>DC Motor Encoder &amp; Position Logging</h3>
+        <p>I wired an Arduino Mega motor-and-encoder setup with an LCD display, then connected it to MATLAB to record shaft position over time. The main challenge was getting the serial communication and data capture working reliably. The final recording compared a fixed reference angle with encoder measurements as I turned the shaft by hand.</p>
+        <div class="build-card__tags" aria-label="Technologies used">
+          <span>Arduino Mega</span><span>Quadrature Encoder</span><span>MATLAB</span><span>Serial Communication</span><span>LCD</span>
+        </div>
       </div>
-
-      <p class="project-note">The full archive keeps the older photos, videos, journals, CAD work, outreach, sports, martial arts, and other projects from the original site.</p>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="footer__inner">
-      <span>© <span id="year">2026</span> Samia Rivera</span>
-      <div class="footer__links">
-        <a href="mailto:srive26@u.rochester.edu">Email</a>
-        <a href="https://www.linkedin.com/in/samia-rivera">LinkedIn</a>
-        <a href="https://github.com/srive26-design">GitHub</a>
-        <a href="#top">Back to top</a>
+      <div class="build-card__media-layout">
+        <figure class="build-card__demo">
+          <video controls playsinline preload="metadata" poster="assets/motor-demo-poster.webp" aria-label="Arduino motor encoder and serial position logging demonstration">
+            <source src="assets/motor-encoder-demo.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+          </video>
+          <figcaption>Encoder readout and serial capture — demo video</figcaption>
+        </figure>
+        <div class="build-card__gallery" aria-label="Motor position measurement photos">
+          <a class="build-card__tile" href="assets/motor-lcd-readout.webp" target="_blank" rel="noopener noreferrer">
+            <img src="assets/motor-lcd-readout.webp" alt="Arduino motor shield, LCD readout, and encoder-equipped DC motor" loading="lazy">
+            <span>LCD position readout</span>
+          </a>
+          <a class="build-card__tile" href="assets/motor-angle-measurement.webp" target="_blank" rel="noopener noreferrer">
+            <img src="assets/motor-angle-measurement.webp" alt="LCD showing motor angle during encoder measurements" loading="lazy">
+            <span>Angle measurement</span>
+          </a>
+          <a class="build-card__tile" href="assets/motor-encoder-wiring.webp" target="_blank" rel="noopener noreferrer">
+            <img src="assets/motor-encoder-wiring.webp" alt="Encoder and motor circuit wired on a breadboard" loading="lazy">
+            <span>Breadboard and wiring</span>
+          </a>
+          <a class="build-card__tile" href="assets/motor-serial-debug.webp" target="_blank" rel="noopener noreferrer">
+            <img src="assets/motor-serial-debug.webp" alt="Computer screen showing Arduino development environment and serial output" loading="lazy">
+            <span>Serial data debugging</span>
+          </a>
+        </div>
       </div>
-    </div>
-  </footer>
-</body>
-</html>
+    </article>
+
+    <!-- PROJECT 3: ROBOTIC ARM -->
+    <article class="build-card" id="robotic-arm">
+      <div class="build-card__intro">
+        <p class="build-card__category">LUNARBOTICS / ROBOTICS OUTREACH</p>
+        <h3>Servo-Driven Robotic Arm</h3>
+        <p>As part of a Lunarbotics outreach project, I worked on a multi-joint robotic arm with 3D-printed components and servo motors. My work has included Arduino Mega control, servo positioning, and getting commands from a computer to the hardware over serial communication.</p>
+        <div class="build-card__tags" aria-label="Technologies used">
+          <span>Arduino Mega</span><span>Servo Motors</span><span>UART</span><span>Python</span><span>Robotics</span>
+        </div>
+      </div>
+      <div class="build-card__gallery build-card__gallery--arm" aria-label="Robotic arm build photos">
+        <a class="build-card__tile" href="assets/robotic-arm-front.webp" target="_blank" rel="noopener noreferrer">
+          <img src="assets/robotic-arm-front.webp" alt="Front view of a blue and purple multi-joint robotic arm prototype on its circular base" loading="lazy">
+          <span>Arm prototype — front</span>
+        </a>
+        <a class="build-card__tile" href="assets/robotic-arm-side.webp" target="_blank" rel="noopener noreferrer">
+          <img src="assets/robotic-arm-side.webp" alt="Side view of the robotic arm showing joints and wiring" loading="lazy">
+          <span>Arm prototype — side</span>
+        </a>
+      </div>
+    </article>
+  </div>
+</section>
+<!-- END: 2026 engineering builds -->
