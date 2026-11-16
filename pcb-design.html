@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en" id="top">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#161b2d">
+  <meta name="description" content="KiCad board design portfolio: a 555 timer astable oscillator, amplifier PCB, schematic verification, routing, and Gerbers.">
+  <title>KiCad Schematic &amp; PCB Design | Samia Rivera</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="portfolio-v2.css">
+  <script src="portfolio-site.js" defer></script>
+  
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <nav class="nav" aria-label="Main navigation">
+  <div class="nav__inner">
+    <a class="nav__logo" href="index.html">samia<span>.</span>rivera</a>
+    <ul class="nav__links">
+      <li><a class="nav__link" href="index.html">Home</a></li>
+      <li><a class="nav__link" href="portfolio.html" aria-current="page">Work</a></li>
+      <li><a class="nav__link" href="now.html">Currently Building</a></li>
+      <li><a class="nav__link nav__link--resume" href="assets/Samia-Rivera-Resume.pdf?v=202611" target="_blank" rel="noopener noreferrer">Résumé ↗</a></li>
+    </ul>
+  </div>
+</nav>
+  <main id="main">
+<header class="case-hero"><div class="container"><a class="case-hero__back" href="portfolio.html#pcb-design">← Back to all work</a><p class="eyebrow eyebrow--peach">Hardware design / KiCad / 2026</p><h1>From a schematic to files a board manufacturer can read.</h1><p class="lede">I've been developing my PCB design workflow in KiCad, including schematic capture, footprint selection, routing, electrical checks, and fabrication outputs. Two examples are a 555 timer oscillator and an amplifier board.</p><ul class="tags"><li>KiCad</li><li>Schematic Capture</li><li>PCB Layout</li><li>ERC / DRC</li><li>Gerbers</li><li class="tag--peach">Documentation in progress</li></ul><div class="case-cover"><div class="case-cover__visual"><img src="assets/pcb-555-layout.webp" alt="Placeholder for 555 timer PCB routing screenshot"></div><aside class="case-cover__notes"><h2>At a glance</h2><dl><dt>Design 1</dt><dd>555 timer astable oscillator schematic and PCB</dd><dt>Design 2</dt><dd>Amplifier PCB design and Gerber package</dd><dt>Tools</dt><dd>KiCad, footprints, board rules, manufacturing-file export</dd><dt>Important note</dt><dd>This documents design files, not a claim that physical PCBs have been manufactured.</dd></dl></aside></div></div></header>
+<section class="case-section"><div class="container"><div class="case-heading"><p class="eyebrow">01 / 555 timer oscillator</p><h2>Giving the schematic an actual home on a PCB.</h2><p>A 555 timer astable is a simple enough circuit to understand, but building a usable board layout still requires checking the connections, matching symbols with footprints, placing parts, and routing traces.</p></div><div class="detail-cards"><article><span>01 / SCHEMATIC</span><h3>Represent the circuit</h3><p>Capture the circuit and verify pin connections and values before moving to layout.</p></article><article><span>02 / BOARD</span><h3>Place and route</h3><p>Associate footprints, arrange the components, and route the copper connections.</p></article><article><span>03 / CHECKS</span><h3>Review the design</h3><p>Use electrical and design-rule checks to catch mistakes before producing manufacturing files.</p></article></div><div class="media-gallery media-gallery--two" style="margin-top:1.3rem"><figure><img src="assets/pcb-555-schematic.webp" alt="Placeholder for KiCad 555 timer oscillator schematic" loading="lazy"><figcaption>To add: 555 timer schematic screenshot</figcaption></figure><figure><img src="assets/pcb-555-layout.webp" alt="Placeholder for KiCad 555 timer board layout" loading="lazy"><figcaption>To add: 555 timer PCB layout screenshot with outline and routing</figcaption></figure></div></div></section>
+<section class="case-section case-section--soft"><div class="container"><div class="case-heading"><p class="eyebrow eyebrow--lavender">02 / amplifier board</p><h2>Learning what it takes to hand off a board design.</h2></div><div class="two-col"><div class="prose"><p>For an amplifier PCB assignment, I worked through board connections, routing, edge cuts, layout checks, and the steps needed to export a Gerber package. I learned how easy it is for a schematic and a PCB layout to drift apart if I don't verify the nets carefully.</p><p>I'd like to show a clean screenshot of the final routed board and a quick overview of the exported fabrication layers. I'm leaving those image slots clearly labeled until the real screenshots are added.</p><div class="notice"><p><strong>Documentation note:</strong> a routed board and Gerber files are a manufacturing handoff, not proof that the fabricated circuit has been electrically tested.</p></div></div><figure class="content-figure"><img src="assets/pcb-amplifier-layout.webp" class="future-photo" alt="Placeholder for completed amplifier PCB layout screenshot" loading="lazy"><figcaption>To add: amplifier PCB view, ideally with copper layers and board outline visible.</figcaption></figure></div></div></section>
+<section class="case-section"><div class="container"><div class="result-highlight"><h3>What this added to my toolkit</h3><p>Designing a board means thinking beyond whether a circuit works on paper. Footprints, clearances, orientation, mechanical dimensions, and file outputs all affect whether someone can actually build it.</p></div></div></section>
+<section class="section contact-band"><div class="container"><h2>Want to see the rest of the builds?</h2><div class="links"><a href="portfolio.html" class="button button--accent">All projects ↗</a><a href="now.html" class="button">Current work ↗</a></div></div></section>
+  </main>
+  <footer class="footer">
+  <div class="container footer__inner">
+    <span>© <span data-year>2026</span> Samia Rivera · built by me, bugs and all.</span>
+    <div class="footer__links">
+      <a href="mailto:srive26@u.rochester.edu">Email</a>
+      <a href="https://www.linkedin.com/in/samia-rivera" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://github.com/srive26-design" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="archive.html">Earlier work</a>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

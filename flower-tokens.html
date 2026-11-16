@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en" id="top">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#161b2d">
+  <meta name="description" content="ESP32-C3, MQTT, 3D printing, soldering, LED and motor integration: the full Flower Tokens engineering project.">
+  <title>Flower Tokens · Wireless Embedded Devices | Samia Rivera</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="portfolio-v2.css">
+  <script src="portfolio-site.js" defer></script>
+  
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <nav class="nav" aria-label="Main navigation">
+  <div class="nav__inner">
+    <a class="nav__logo" href="index.html">samia<span>.</span>rivera</a>
+    <ul class="nav__links">
+      <li><a class="nav__link" href="index.html">Home</a></li>
+      <li><a class="nav__link" href="portfolio.html" aria-current="page">Work</a></li>
+      <li><a class="nav__link" href="now.html">Currently Building</a></li>
+      <li><a class="nav__link nav__link--resume" href="assets/Samia-Rivera-Resume.pdf?v=202611" target="_blank" rel="noopener noreferrer">Résumé ↗</a></li>
+    </ul>
+  </div>
+</nav>
+  <main id="main">
+<header class="case-hero"><div class="container"><a class="case-hero__back" href="portfolio.html#flower-tokens">← Back to all work</a><p class="eyebrow eyebrow--lavender">Personal build / ESP32-C3 / 2026</p><h1>Flower Tokens: two tiny devices, one big wiring puzzle.</h1><p class="lede">I wanted to make a gift that felt personal and worked like real hardware. I ended up designing, printing, soldering, and programming two handheld wireless devices that send light-and-vibration signals to each other.</p><ul class="tags"><li class="tag--lav">ESP32-C3</li><li>Wi-Fi / MQTT</li><li>WS2812B LEDs</li><li>Vibration motor</li><li>OpenSCAD</li><li>C++</li><li>3D printing</li></ul>
+<div class="case-cover"><div class="case-cover__visual"><img src="assets/flower-tokens-handheld.webp" alt="Finished pink and lavender Flower Tokens held side by side, both with LEDs illuminated"></div><aside class="case-cover__notes"><h2>At a glance</h2><dl><dt>What it is</dt><dd>A pair of wireless handheld keepsakes</dd><dt>My role</dt><dd>Concept, firmware, circuit assembly, CAD, enclosure finishing and integration</dd><dt>Hardware</dt><dd>Seeed XIAO ESP32-C3, addressable LEDs, battery, touch input and vibration motor</dd><dt>Status</dt><dd>Built, assembled, and tested inside the closed enclosures</dd></dl></aside></div></div></header>
+<section class="case-section"><div class="container"><div class="case-heading"><p class="eyebrow">01 / why I made them</p><h2>I didn't want the gift to just sit on a shelf.</h2><p class="lede">The goal was simple to explain but much harder to build: two separate tokens that can tell each other “I'm thinking of you” without needing to be in the same room.</p></div><div class="two-col"><div class="prose"><h3>What the pair does</h3><p>Each token connects to Wi-Fi and communicates through MQTT. Sending a message triggers the other token's LEDs and vibration motor. The enclosures are small enough to hold, with a touch area, a power switch, and a place for the electronics to live.</p><p>I liked that this project forced me to think about everything at once: wireless communication, power, physical fit, component protection, and making the finished object actually nice to hold.</p></div><div class="flow-diagram" aria-label="System architecture: token A communicates bidirectionally with MQTT over Wi-Fi to token B"><div class="flow-diagram__node"><strong>Token A</strong><small>Touch input → ESP32-C3 → LEDs + motor</small></div><span class="flow-diagram__arrow" aria-hidden="true">↔</span><div class="flow-diagram__node"><strong>Wi-Fi / MQTT</strong><small>Message relay</small></div><span class="flow-diagram__arrow" aria-hidden="true">↔</span><div class="flow-diagram__node"><strong>Token B</strong><small>ESP32-C3 → LEDs + motor</small></div></div></div></div></section>
+<section class="case-section case-section--soft"><div class="container"><div class="case-heading"><p class="eyebrow eyebrow--lavender">02 / engineering decisions</p><h2>Small enclosure. A lot of decisions.</h2><p>I started with the available parts, then adjusted the mechanical design around the electronics rather than treating packaging as an afterthought.</p></div><div class="detail-cards"><article><span>01 / ENCLOSURE</span><h3>Designed for actual components</h3><p>Used OpenSCAD to make separate shell halves with internal cavities, alignment features, access for the USB port and switch, plus decorative lighting details.</p></article><article><span>02 / CIRCUITRY</span><h3>Light, touch, vibration</h3><p>Integrated WS2812B addressable LEDs, a small motor driven through a transistor and flyback diode, and a copper-tape input pad with a pull-down resistor.</p></article><article><span>03 / FIRMWARE</span><h3>Two-way communication</h3><p>Programmed ESP32-C3 boards to send and receive messages over Wi-Fi/MQTT and trigger visual and tactile feedback on receipt.</p></article></div>
+<div class="media-gallery" style="margin-top:1.2rem"><figure><a href="assets/flower-enclosure-parts.webp" target="_blank" rel="noopener noreferrer"><img src="assets/flower-enclosure-parts.webp" alt="3D printed Flower Token enclosure components" loading="lazy"></a><figcaption>Enclosures before final assembly</figcaption></figure><figure><a href="assets/flower-soldering-workbench.webp" target="_blank" rel="noopener noreferrer"><img src="assets/flower-soldering-workbench.webp" alt="Soldering small circuit board while assembling Flower Tokens" loading="lazy"></a><figcaption>Hand-soldering the electronics</figcaption></figure><figure><a href="assets/flower-interior-assembly.webp" target="_blank" rel="noopener noreferrer"><img src="assets/flower-interior-assembly.webp" alt="Electronics fitted inside both token shells" loading="lazy"></a><figcaption>Checking the fit inside both shells</figcaption></figure></div></div></section>
+<section class="case-section"><div class="container"><div class="case-heading"><p class="eyebrow">03 / what took the most debugging</p><h2>Making it work once was not enough.</h2></div><div class="two-col"><div class="prose"><h3>The touch pad</h3><p>Early overlapping strips of copper tape gave me unreliable behavior. I reworked the contact area into a single pad, checked the electrical connection, and used a 1 MΩ pull-down resistor on the input.</p><h3>Fitting everything without breaking it</h3><p>LEDs, motor, battery, switch, and wires all needed room, and the case had to close without pinching anything. I used careful positioning, insulation, and strain relief while doing repeated open-case and closed-case checks.</p><h3>From serial messages to actual feedback</h3><p>Debugging didn't end when the MQTT console printed that a message was received. The real test was whether the opposite physical token lit up and vibrated while assembled.</p></div><figure class="content-figure"><img src="assets/flower-electronics-test.webp" alt="Flower Token open during electronics testing" class="future-photo"><figcaption>Electronics test while the enclosure was still open.</figcaption></figure></div></div></section>
+<section class="case-section case-section--soft"><div class="container"><div class="case-heading"><p class="eyebrow eyebrow--peach">04 / proof it works</p><h2>From a workbench prototype to a finished pair.</h2><p>In this clip, the completed devices respond with their addressable LEDs. The video is deliberately short so the result is easy to see.</p></div><figure class="demo-panel"><video controls playsinline preload="metadata" poster="assets/flower-tokens-finished.webp" aria-label="Flower Tokens lighting up in a demonstration"><source src="assets/flower-tokens-demo.mp4" type="video/mp4">Your browser does not support MP4 video.</video><figcaption>Finished Flower Tokens responding to inputs. The demonstration video is trimmed for the portfolio.</figcaption></figure><div class="result-highlight" style="margin-top:1.2rem"><h3>What I learned</h3><p>Packaging, wiring, and firmware are not separate problems when the project has to fit in your hand. This was my first time having to solve all of them together and still make the result look like something I'd want to give someone.</p></div></div></section>
+<section class="case-section"><div class="container"><div class="case-heading"><p class="eyebrow">05 / design files to add</p><h2>What I'd still like to document.</h2><p>These are labeled placeholders, not images of results. When I export the CAD and wiring diagrams, I can replace the placeholder files without changing this page's code.</p></div><div class="media-gallery media-gallery--two"><figure><img src="assets/flower-enclosure-cad.webp" alt="Placeholder for OpenSCAD enclosure model screenshot" loading="lazy"><figcaption>OpenSCAD cutaway or exploded enclosure view (to add)</figcaption></figure><figure><img src="assets/flower-wiring-diagram.webp" alt="Placeholder for Flower Token electronics wiring diagram" loading="lazy"><figcaption>Annotated circuit/wiring diagram (to add)</figcaption></figure></div></div></section>
+<section class="section contact-band"><div class="container"><p class="eyebrow">One project, a lot of small victories</p><h2>Want to see the next build?</h2><div class="links"><a class="button button--accent" href="portfolio.html">All projects ↗</a><a class="button" href="now.html">What I'm working on now ↗</a></div></div></section>
+  </main>
+  <footer class="footer">
+  <div class="container footer__inner">
+    <span>© <span data-year>2026</span> Samia Rivera · built by me, bugs and all.</span>
+    <div class="footer__links">
+      <a href="mailto:srive26@u.rochester.edu">Email</a>
+      <a href="https://www.linkedin.com/in/samia-rivera" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://github.com/srive26-design" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="archive.html">Earlier work</a>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

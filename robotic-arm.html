@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en" id="top">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#161b2d">
+  <meta name="description" content="Lunarbotics robotic arm with 3D printing, Arduino Mega, servos, Python controller input and UART serial communication.">
+  <title>Servo-Driven Robotic Arm | Samia Rivera</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="portfolio-v2.css">
+  <script src="portfolio-site.js" defer></script>
+  
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <nav class="nav" aria-label="Main navigation">
+  <div class="nav__inner">
+    <a class="nav__logo" href="index.html">samia<span>.</span>rivera</a>
+    <ul class="nav__links">
+      <li><a class="nav__link" href="index.html">Home</a></li>
+      <li><a class="nav__link" href="portfolio.html" aria-current="page">Work</a></li>
+      <li><a class="nav__link" href="now.html">Currently Building</a></li>
+      <li><a class="nav__link nav__link--resume" href="assets/Samia-Rivera-Resume.pdf?v=202611" target="_blank" rel="noopener noreferrer">Résumé ↗</a></li>
+    </ul>
+  </div>
+</nav>
+  <main id="main">
+<header class="case-hero"><div class="container"><a class="case-hero__back" href="portfolio.html#robotic-arm">← Back to all work</a><p class="eyebrow eyebrow--lavender">Lunarbotics outreach / robotics / in progress</p><h1>Servo-driven robotic arm: software commands meet real joints.</h1><p class="lede">I'm working on the integration side of a multi-joint robotic arm: making computer/controller commands translate into predictable servo motion through an Arduino Mega, while dealing with the mechanics and wiring of a physical prototype.</p><ul class="tags"><li>Arduino Mega 2560</li><li>Servo Motors</li><li>UART</li><li>Python</li><li>C/C++</li><li>3D Printing</li><li class="tag--peach">In progress</li></ul><div class="case-cover"><div class="case-cover__visual"><img src="assets/robotic-arm-front.webp" alt="Blue and purple 3D printed robotic arm prototype from the front"></div><aside class="case-cover__notes"><h2>At a glance</h2><dl><dt>Goal</dt><dd>Control a multi-joint robotic arm using computer input</dd><dt>My work</dt><dd>Controller/Arduino communication, servo positioning and integration testing</dd><dt>System</dt><dd>Computer/controller → serial → Arduino Mega → servos</dd><dt>Status</dt><dd>Prototype assembled; control and integration in progress</dd></dl></aside></div></div></header>
+<section class="case-section"><div class="container"><div class="case-heading"><p class="eyebrow">01 / the goal</p><h2>Not just moving a servo — coordinating an arm.</h2></div><div class="two-col"><div class="prose"><p>The project is a 3D-printed robotic arm built for Lunarbotics outreach. The mechanical design has several joints powered by servos, and the control goal is to use commands from a computer or controller to position those joints.</p><p>One challenge is that a command can be perfectly reasonable in code but still cause a physical problem: power limits, sudden jumps, or a joint attempting to move past a mechanical constraint.</p><p>I'm documenting this as <strong>an in-progress build</strong>, rather than presenting a finished pick-and-place robot that hasn't been demonstrated yet.</p></div><figure class="content-figure"><img src="assets/robotic-arm-side.webp" class="future-photo" alt="Side view of blue and purple 3D printed arm prototype" loading="lazy"><figcaption>Side view of the current multi-joint prototype.</figcaption></figure></div></div></section>
+<section class="case-section case-section--soft"><div class="container"><div class="case-heading"><p class="eyebrow eyebrow--lavender">02 / command architecture</p><h2>The important part is the path from input to motion.</h2></div><div class="flow-diagram" aria-label="Xbox controller inputs move through a Python computer program and serial UART to an Arduino that controls servo motors"><div class="flow-diagram__node"><strong>Controller</strong><small>Stick/button inputs</small></div><span class="flow-diagram__arrow" aria-hidden="true">→</span><div class="flow-diagram__node"><strong>Computer</strong><small>Python reads the input</small></div><span class="flow-diagram__arrow" aria-hidden="true">→</span><div class="flow-diagram__node"><strong>UART / Arduino Mega</strong><small>Receive target angles</small></div><span class="flow-diagram__arrow" aria-hidden="true">→</span><div class="flow-diagram__node"><strong>Servos &amp; joints</strong><small>Physical arm motion</small></div></div><div class="detail-cards" style="margin-top:1.2rem"><article><span>INPUT</span><h3>Controller mapping</h3><p>Interpret computer/controller input as joint-angle commands the Arduino can use.</p></article><article><span>COMMUNICATION</span><h3>UART messages</h3><p>Send angle information over serial and check that messages reach the correct part of the system.</p></article><article><span>HARDWARE</span><h3>Servo behavior</h3><p>Test joint movement, pay attention to power, and reduce sudden or unexpected motion.</p></article></div></div></section>
+<section class="case-section"><div class="container"><div class="case-heading"><p class="eyebrow">03 / current engineering problems</p><h2>It's the real-world behavior that makes this interesting.</h2></div><div class="two-col"><div class="prose"><h3>Getting servo positions to behave</h3><p>During development, I investigated motion where a servo jumped back after receiving a position command. That kind of behavior can come from software logic, power, startup state, or an unexpected command — so I'm treating it as an integration problem.</p><h3>Making the system easier to debug</h3><p>I moved toward a simple serial command path between the computer and Arduino rather than adding extra communication complexity too early. It makes it easier to inspect the values I'm actually sending.</p><h3>Next: prove the full chain</h3><p>A useful demonstration will show an input, the angle sent by the computer, and the corresponding joint movement in the same short clip.</p></div><div class="media-gallery media-gallery--two"><figure><img src="assets/robotic-arm-wiring.webp" alt="Placeholder for the arm's servo power and wiring setup" loading="lazy"><figcaption>To add: clear servo, ground, and power wiring photo</figcaption></figure><figure><img src="assets/robotic-arm-controller.webp" alt="Placeholder for controller-to-arm demonstration" loading="lazy"><figcaption>To add: controller + arm demonstration frame</figcaption></figure></div></div></div></section>
+<section class="case-section case-section--soft"><div class="container"><div class="result-highlight"><h3>Why I like this project</h3><p>It forces electronics, mechanics, and code to agree with each other. A working serial printout isn't enough; the actual arm has to do what I intended, safely and repeatedly. That's the part I'm working toward.</p></div></div></section>
+<section class="section contact-band"><div class="container"><h2>Follow along as this build develops.</h2><div class="links"><a href="now.html#active" class="button button--accent">Current progress ↗</a><a href="portfolio.html" class="button">All projects ↗</a></div></div></section>
+  </main>
+  <footer class="footer">
+  <div class="container footer__inner">
+    <span>© <span data-year>2026</span> Samia Rivera · built by me, bugs and all.</span>
+    <div class="footer__links">
+      <a href="mailto:srive26@u.rochester.edu">Email</a>
+      <a href="https://www.linkedin.com/in/samia-rivera" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://github.com/srive26-design" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="archive.html">Earlier work</a>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

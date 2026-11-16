@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en" id="top">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#161b2d">
+  <meta name="description" content="An evolving workbench of Samia Rivera’s current embedded systems, motor control, robotics, and C++ projects.">
+  <title>Currently Building | Samia Rivera</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="portfolio-v2.css">
+  <script src="portfolio-site.js" defer></script>
+  
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <nav class="nav" aria-label="Main navigation">
+  <div class="nav__inner">
+    <a class="nav__logo" href="index.html">samia<span>.</span>rivera</a>
+    <ul class="nav__links">
+      <li><a class="nav__link" href="index.html">Home</a></li>
+      <li><a class="nav__link" href="portfolio.html">Work</a></li>
+      <li><a class="nav__link" href="now.html" aria-current="page">Currently Building</a></li>
+      <li><a class="nav__link nav__link--resume" href="assets/Samia-Rivera-Resume.pdf?v=202611" target="_blank" rel="noopener noreferrer">Résumé ↗</a></li>
+    </ul>
+  </div>
+</nav>
+  <main id="main">
+<header class="now-hero"><div class="container"><p class="eyebrow eyebrow--peach">A public workbench, not a highlight reel</p><h1>Currently building <span class="accent-lavender">/&nbsp; learning</span></h1><p class="lede">Not everything I work on is finished, and that's kind of the point. Here's what's on my desk, what I'm testing, and what I want to understand better.</p><p class="now-meta">Last reviewed: November 2026 · This page is updated manually (not a live activity feed).</p><div class="anchor-links"><a href="#active">On my bench ↓</a><a href="#recent">Recently wrapped up ↓</a><a href="#signals">Learning &amp; experiments ↓</a></div></div></header>
+<section class="section" id="active"><div class="container"><div class="section__head"><div><p class="eyebrow">01 / in progress</p><h2>What's happening right now.</h2><p>Each entry includes the technical problem, what I've done, and what I want to test next.</p></div></div><div class="now-board">
+  <article class="now-board__card"><div class="now-board__left"><p class="now-board__status">● TESTING / COURSEWORK</p><p>ECE 112 · Mechatronics</p><ul class="tags"><li>Arduino</li><li>MATLAB</li><li>Feedback</li></ul></div><div><h2>Proportional motor control</h2><p>I'm working with a gearmotor, a quadrature encoder, and an Arduino Mega to understand the difference between commanding an angle and actually reaching it.</p><h3>What I'm doing</h3><ul><li>Recording angle measurements in MATLAB and comparing them against a reference.</li><li>Trying different proportional gains and looking at the response rather than guessing what a "good" gain should be.</li><li>Debugging serial capture and interpreting what the encoder is telling me.</li></ul><h3>Next documentation step</h3><p>Export a clean comparison figure showing the responses for several tested gains, including axes and the reference line.</p><a class="card__link" href="motor-control.html">See the setup and lab notes →</a></div></article>
+  <article class="now-board__card"><div class="now-board__left"><p class="now-board__status">● INTEGRATING / ROBOTICS</p><p>Lunarbotics outreach</p><ul class="tags"><li>UART</li><li>Python</li><li>Servos</li></ul></div><div><h2>Robotic arm controller and servos</h2><p>A multi-joint, 3D-printed arm is great until the real motors and wiring enter the picture. My focus is getting the command path and the mechanical motion to behave together.</p><h3>What I'm doing</h3><ul><li>Sending angle commands from a computer/controller to an Arduino over serial.</li><li>Testing servo positioning and the arm's joint motion.</li><li>Working through power and motion-control challenges.</li></ul><h3>Next documentation step</h3><p>Record a short controller-to-arm demo and take one clean image showing the wiring and power setup.</p><a class="card__link" href="robotic-arm.html">See the arm project →</a></div></article>
+  <article class="now-board__card"><div class="now-board__left"><p class="now-board__status">● ITERATING / PERSONAL</p><p>C++ console game</p><ul class="tags"><li>C++</li><li>Game logic</li><li>Systems</li></ul></div><div><h2>Slightly Dangerous LLC: deeper game systems</h2><p>I'm making exploration worth doing. That means rethinking how items are collected, how inventory works, and why getting back out of the maze matters.</p><h3>What I'm doing</h3><ul><li>Rebuilding loot and inventory so the items are more than instant money.</li><li>Developing the maze's progression, economy, and atmosphere.</li><li>Continuing to clean up and expand the underlying C++ code.</li></ul><h3>Next documentation step</h3><p>Add a short gameplay capture showing exploration and the updated inventory loop.</p><a class="card__link" href="slightly-dangerous.html">Open the game project →</a></div></article>
+</div></div></section>
+<section class="section section--soft" id="recent"><div class="container"><div class="section__head"><div><p class="eyebrow eyebrow--lavender">02 / recently finished or documented</p><h2>Things I can finally show.</h2></div></div><div class="detail-cards"><article><span>01 / FINISHED BUILD</span><h3>Flower Tokens</h3><p>Two closed, assembled wireless devices that glow and vibrate in response to messages, complete with custom enclosures.</p><p><a class="card__link" href="flower-tokens.html">See the full build →</a></p></article><article><span>02 / DESIGN FILES</span><h3>KiCad PCB work</h3><p>Schematic capture, footprints, layout checks, and fabrication outputs for a 555 timer and an amplifier board.</p><p><a class="card__link" href="pcb-design.html">See hardware documentation →</a></p></article><article><span>03 / LAB DOCUMENTATION</span><h3>Encoder position logging</h3><p>Five-second MATLAB recording of measured shaft angle against a fixed reference, including serial troubleshooting.</p><p><a class="card__link" href="motor-control.html">See the data workflow →</a></p></article></div></div></section>
+<section class="section" id="signals"><div class="container"><div class="section__head"><div><p class="eyebrow eyebrow--peach">03 / concepts I am experimenting with</p><h2>Learning beyond the finished build.</h2></div></div><div class="two-col"><div class="prose"><h3>Audio and room acoustics in MATLAB</h3><p>In Signals &amp; Systems coursework, I recorded voice samples and simulated how different impulse responses change what a sound recording feels like. I compared environments with clearer and more echo-like behavior.</p><p>I'd like to turn the plots and WAV outputs into a small interactive explanation of convolution and room response once the files are organized.</p><h3>Circuits, devices, and control theory</h3><p>I'm also spending time learning how to analyze transistors, design circuits, and connect the equations from class to what happens on physical hardware.</p></div><figure class="content-figure"><img class="future-photo" src="assets/signals-room-response.webp" alt="Placeholder for future MATLAB room response plot"><figcaption>Placeholder — replace with your real impulse-response figure.</figcaption></figure></div></div></section>
+<section class="section contact-band"><div class="container"><p class="eyebrow">The fun part is that it keeps changing.</p><h2>Have a suggestion or a good engineering rabbit hole?</h2><p>I'd love to hear about it.</p><a class="button button--accent" href="mailto:srive26@u.rochester.edu">Send me a note ↗</a></div></section>
+  </main>
+  <footer class="footer">
+  <div class="container footer__inner">
+    <span>© <span data-year>2026</span> Samia Rivera · built by me, bugs and all.</span>
+    <div class="footer__links">
+      <a href="mailto:srive26@u.rochester.edu">Email</a>
+      <a href="https://www.linkedin.com/in/samia-rivera" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://github.com/srive26-design" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="archive.html">Earlier work</a>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
